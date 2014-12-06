@@ -1,0 +1,23 @@
+<h2>All Random Logs </h2>
+<br />
+Filter: <input type="text" ng-model="orderFilter.name" />
+<br /><br />
+<div class="wrap">
+
+<table class="table">
+    <tr>
+        <th>Action</th>
+        <th>Link</th>
+        <th>description</th>
+        <th>Device</th>
+        <th>Pic URL</th>
+    </tr>
+    <tr ng-repeat="order in orders | filter:orderFilter | orderBy:'name'" class="repeat-animation">
+        <td>{{ order.action }}</td>
+        <td>{{ order.link }}</td>
+        <td>{{ order.description }}</td>
+        <td>{{ order.device }}</td>
+        <td>{{ order.pic }}</td>
+    </tr>
+</table>
+</div>

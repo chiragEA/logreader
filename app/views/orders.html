@@ -1,0 +1,20 @@
+<h2> Logger Id {{ customer.id }} - Details</h2>
+<br />
+<table class="table table-striped">
+    <tr>
+    <tr>
+        <th>Action</th>
+        <th>Link</th>
+        <th>description</th>
+        <th>Device</th>
+        <th>Pic URL</th>
+    </tr>
+    </tr>
+    <tr ng-repeat="order in customer.orders" class="repeat-animation">
+        <td>{{ order.action }}</td>
+        <td>{{ order.link }}</td>
+        <td>{{ order.description }}</td>
+        <td>{{ order.device }}</td>
+        <td>{{ order.pic }}</td>
+    </tr>
+</table>

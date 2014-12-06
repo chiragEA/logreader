@@ -1,0 +1,27 @@
+{
+  "name": "monitorily",
+  "version": "1.0.0",
+  "description": "Monitorily app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "Monitorily",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chiragEA/monitorily.git"
+  },
+  "keywords": [
+    "Monitorily"
+  ],
+  "author": "Chirag",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiragEA/monitorily/issues"
+  },
+  "homepage": "https://github.com/chiragEA/monitorily"
+}
