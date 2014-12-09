@@ -2,6 +2,11 @@ var express = require('express'),
     app = express();
         var port = process.env.PORT || 3000;
 
+var mongo = require('mongodb');
+var monk = require('monk');
+//var db = monk('localhost:27017/newsreader');
+
+var db = monk('mongodb://admin:developer@oceanic.mongohq.com:10042/eatads/');
 
 //Express 3
 //app.configure(function() {
@@ -23,8 +28,35 @@ app.get('/customers/:id', function(req, res) {
     res.json(data);
 });
 
+exports.getUser = function(db) {
+    return function(req, res) {
+        var collection = db.get('newsreader');
+        collection.find({},{},function(e,docs){
+            console.log(docs)
+            res.send(docs);
+        });
+    };
+};
+
+app.get('/x', function(req, res) {
+            var collection = db.get('niffler');
+        collection.find({},{},function(e,docs){
+            customers=docs;
+            console.log(customers)
+            res.send(docs);
+        });
+    //res.json(500, { error: 'An error has occurred!' });
+});
+
+
 app.get('/customers', function(req, res) {
+                var collection = db.get('niffler');
+        collection.find({},{},function(e,docs){
+            customers=docs;
+            console.log(customers)
     res.json(customers);
+        });
+
     //res.json(500, { error: 'An error has occurred!' });
 });
 

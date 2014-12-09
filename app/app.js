@@ -8,13 +8,13 @@
                 controller: 'CustomersController',
                 templateUrl: 'app/views/customers.html'
             })
-            .when('/orders/:customerId', {
+            .when('/logs/:customerId', {
                 controller: 'OrdersController',
-                templateUrl: 'app/views/orders.html'
+                templateUrl: 'app/views/logs.html'
             })
-            .when('/orders', {
+            .when('/logs', {
                 controller: 'AllOrdersController',
-                templateUrl: 'app/views/allorders.html'
+                templateUrl: 'app/views/alllogs.html'
             })
             .otherwise( { redirectTo: '/' } );
     });
